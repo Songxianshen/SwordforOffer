@@ -11,7 +11,31 @@
 接着扫描下一个数字；如果不是，则拿它和第m个数字进行比较。如果它和第m个数字相等；就找到了一个重复的数字（该数字在下标为i和
 m的位置都出现了）；如果它和第m个不相等，就把第i个数字和第m个数字交换，**把m放到属于它的位置**。接下来再重复比较、交换的
 过程，直到我们发现一个重复的数字。
-
+```java
+    public boolean duplicate(int [] arr){
+        // 判断数组是否为空
+        if(arr == null || arr.length <= 0){
+            return false;
+        }
+        // 题目要求
+        for(int i = 0;i<arr.length;i++){
+            if(arr[i] < 0 || arr[i] > arr.length - 1){
+                return false;
+            }
+        }
+        for (int i = 0;i < arr.length; i++){
+            while (arr[i] != i){
+                if (arr[i] == arr[arr[i]]){
+                    return true;
+                }
+                int temp = arr[i];
+                arr[i] = arr[temp];
+                arr[temp] = temp;
+            }
+        }
+        return false;
+    }
+```
     public boolean duplicate(int [] arr){
         // 判断数组是否为空
         if(arr == null || arr.length <= 0){
