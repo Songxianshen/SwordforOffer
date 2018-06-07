@@ -12,53 +12,31 @@
 m的位置都出现了）；如果它和第m个不相等，就把第i个数字和第m个数字交换，**把m放到属于它的位置**。接下来再重复比较、交换的
 过程，直到我们发现一个重复的数字。
 ```java
-    public boolean duplicate(int [] arr){
-        // 判断数组是否为空
-        if(arr == null || arr.length <= 0){
-            return false;
-        }
-        // 题目要求
-        for(int i = 0;i<arr.length;i++){
-            if(arr[i] < 0 || arr[i] > arr.length - 1){
-                return false;
-            }
-        }
-        for (int i = 0;i < arr.length; i++){
-            while (arr[i] != i){
-                if (arr[i] == arr[arr[i]]){
-                    return true;
-                }
-                int temp = arr[i];
-                arr[i] = arr[temp];
-                arr[temp] = temp;
-            }
-        }
+public boolean duplicate(int [] arr){
+    // 判断数组是否为空
+    if(arr == null || arr.length <= 0){
         return false;
     }
+    // 题目要求
+    for(int i = 0;i<arr.length;i++){
+        if(arr[i] < 0 || arr[i] > arr.length - 1){
+            return false;
+        }
+    }
+    for (int i = 0;i < arr.length; i++){
+        while (arr[i] != i){
+            if (arr[i] == arr[arr[i]]){
+                return true;
+            }
+            int temp = arr[i];
+            arr[i] = arr[temp];
+            arr[temp] = temp;
+        }
+    }
+    return false;
+}
 ```
-    public boolean duplicate(int [] arr){
-        // 判断数组是否为空
-        if(arr == null || arr.length <= 0){
-            return false;
-        }
-        // 题目要求
-        for(int i = 0;i<arr.length;i++){
-            if(arr[i] < 0 || arr[i] > arr.length - 1){
-                return false;
-            }
-        }
-        for (int i = 0;i < arr.length; i++){
-            while (arr[i] != i){
-                if (arr[i] == arr[arr[i]]){
-                    return true;
-                }
-                int temp = arr[i];
-                arr[i] = arr[temp];
-                arr[temp] = temp;
-            }
-        }
-        return false;
-    }
+
 
 以数据{2,3,1,0,2,5,3}为例来分析找到重复数字的步骤。
 1. 数组的第0个数字是2，它的下标为0，与它的下标不相等，于是把它和下标为2的数字1交换。
