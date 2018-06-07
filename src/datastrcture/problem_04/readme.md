@@ -52,5 +52,24 @@
 
 分析清楚了，然后写代码就很容易啦
 
-
+```java
+public boolean find(int [][] array, int num){
+    if (array == null){
+        return false;
+    }
+    int row = 0;
+    int column = array[0].length - 1;
+    while(row < array.length && column > 0){
+        if(array[row][column] == num){
+            return true;
+        }
+        if(array[row][column] > num){
+            column --;
+        }else {
+            row ++;
+        }
+    }
+    return false;
+}
+```
 
