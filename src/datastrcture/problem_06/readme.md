@@ -36,7 +36,7 @@ public static void printListFromTailToHead(ListNode listNode){
     }
 }
 ```
-第二种则是使用递归，递归在本质上就是一个栈结构。要实现反过来输出链表，我们没访问到一个节点的时候，
+第二种则是使用递归，递归在本质上就是一个栈结构。要实现反过来输出链表，我们每访问到一个节点的时候，
 先递归输出它后面的节点，再输出该节点自身，这样链表的输出结果就反过来了。
 ```java
 public static void printListFromTailToHeadRecursively(ListNode listNode){
