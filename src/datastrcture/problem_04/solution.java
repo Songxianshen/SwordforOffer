@@ -1,7 +1,7 @@
 package datastrcture.problem_04;
 
 public class solution {
-    public boolean find(int [][] array, int num){
+    public static boolean find(int [][] array, int num){
         if (array == null){
             return false;
         }
@@ -27,7 +27,6 @@ public class solution {
                 {4, 7, 10, 13 },
                 {6, 8, 11, 15 }
         };
-        solution test = new solution();
-        System.out.println(test.find(array,1515));
+        System.out.println(find(array,1515));
     }
 }

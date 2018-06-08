@@ -9,33 +9,45 @@
 
 **解题思路：**  
 我们可以先遍历一次字符串，这样就能统计出字符串中空格的总数，并可以由此计算出替换之后的字符串的总长度。  
-每替换一次空格，长度增加2。  
-**总结规律：** 
-1. 首先选取数组中右上角的数字。如果该数字等于要查找的数字，则查找过程结束。
-2. 如果该数字大于要查找的数字，则剔除这个数字所在的列；
-3. 如果改数字小于要查找的数字，则剔除这个数字所在的行；
-4. 这样每一步都可以缩小查找的范围，知道找到要查找的数字，或者查找的范围为空。
+每替换一次空格，长度增加2。这样算法的时间九尾复杂度为**On**。
+1. 把第一个指针指向字符串的末尾，把第二个指针指向替换之后的字符串的末尾。
+2. 依次复制字符串的内容，直至第一个指针碰到第一个空格。
+3. 把第一个空格替换成 “%20” ，把第一个指针向前移动 1 格，把第二个指针向前移动 3 格。
+4. 依次向前复制字符串中的指针，直至碰到空格。
+5. 替换字符串中的倒数第二个空格，把第一个指针向前移动 1 格，把第二个指针向前移动 3 格。
 
-分析清楚了，然后写代码就很容易啦
+* JAVA实现思想  
+从后往前复制，使得数组的长度增加，或者使用StringBuilder、StringBuffer类
 
 ```java
-public boolean find(int [][] array, int num){
-    if (array == null){
-        return false;
+public static String replaceSpace(char[] string){
+    if(string == null){
+        return null;
     }
-    int row = 0;
-    int column = array[0].length - 1;
-    while(row < array.length && column > 0){
-        if(array[row][column] == num){
-            return true;
-        }
-        if(array[row][column] > num){
-            column --;
-        }else {
-            row ++;
+    int originalLength = string.length;
+    int spacecount = 0;
+    for(int i = 0;i < originalLength; i++){
+        if(string[i] == ' '){
+            spacecount++;
         }
     }
-    return false;
+    int newLength = originalLength + 2 * spacecount;
+    char[] temp = new char[newLength];
+    int i = originalLength - 1;
+    int j = newLength - 1;
+    while (i >= 0){
+        if(string[i] == ' '){
+            temp[j]='0';
+            temp[j-1]='2';
+            temp[j-2]='%';
+            j -= 3;
+        }else{
+            temp[j] = string[i];
+            j -= 1;
+        }
+        i -= 1;
+    }
+    return new String(temp);
 }
 ```
 

@@ -1,7 +1,7 @@
 package datastrcture.problem_03;
 
 public class solution {
-    public boolean duplicate(int [] arr){
+    public static boolean duplicate(int [] arr){
         // 判断数组是否为空
         if(arr == null || arr.length <= 0){
             return false;
@@ -28,7 +28,6 @@ public class solution {
 
     public static void main(String[] args) {
         int[] arr = {2,3,1,0,2,5,3};
-        solution test = new solution();
-        System.out.println(test.duplicate(arr));
+        System.out.println(duplicate(arr));
     }
 }
