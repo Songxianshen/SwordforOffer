@@ -30,7 +30,6 @@ public static void printListFromTailToHead(ListNode listNode){
         stack.push(listNode.val);
         listNode = listNode.next;
     }
-
     while (!stack.isEmpty()){
         System.out.println(stack.pop());
     }
@@ -47,7 +46,6 @@ public static void printListFromTailToHeadRecursively(ListNode listNode){
         }else {
             System.out.println(listNode.val);
         }
-
     }
 }
 ```
