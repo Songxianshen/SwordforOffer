@@ -18,11 +18,11 @@ public class ListNode {
 ```java
 public class TreeNode {
     
-    int val;
-    TreeNode left;        // 左孩子
-    TreeNode right;       // 右孩子
+    public int val;
+    public TreeNode left;        // 左孩子
+    public TreeNode right;       // 右孩子
     
-    TreeNode(int x){
+    public TreeNode(int x){
         this.val = x;
     }
 }
