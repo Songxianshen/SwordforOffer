@@ -20,7 +20,7 @@ public class TreeNode {
 }
 ```
 <center class="half">
-    <img src="datastrcture/problem_07/tree.png " width="60%" height="60%">
+    <img src="https://github.com/anxiangSir/SwordforOffer/blob/master/src/datastrcture/problem_07/tree.png" width="60%" height="60%">
 </center>
 
 **解题思路：**    
