@@ -1,21 +1,27 @@
 <link href="markdown.css" rel="stylesheet"></link>
 
-## 从尾到头打印链表
-**题目：从尾到头打印链表**    
+## 重建二叉树
+**题目：重建二叉树**    
 
-输入一个链表的头结点，从尾到头反过来打印出每个节点的值。链表节点定义如下。
+输入某二叉树的前序遍历和中序遍历结果，请重建二叉树。假设输入的前序遍历和中序遍历的结果中都不含重复的数字。例如，输入的
+前序遍历序列为{1， 2， 4， 7， 3， 5， 6， 8}和中序遍历序列{4， 7， 2， 1， 5， 3， 8， 6}，则重建如图所示的二叉树并输出
+它的头结点。二叉树节点的定义如下：
+
 ```java
-public class ListNode {
-    
+public class TreeNode {
+
     public int val;
-    public ListNode next = null;
-    
-    public ListNode(int val){
-        this.val = val;
+    public TreeNode left;        // 左孩子
+    public TreeNode right;       // 右孩子
+
+    public TreeNode(int x){
+        this.val = x;
     }
 }
 ```
-假设面试官不允许改变原来链表的结构。
+<center class="half">
+    <img src="datastrcture/problem_07/tree.png " width="60%" height="60%">
+</center>
 
 **解题思路：**    
 
