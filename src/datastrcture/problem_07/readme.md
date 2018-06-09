@@ -25,34 +25,35 @@ public class TreeNode {
 
 **解题思路：**    
 
-两种解决办法，第一种就是使用栈实现这种顺序。没经过一个节点的时候，把该节点放到一个栈中。
-当遍历完整个链表之后，再从栈顶开始逐个输出节点的值，此时输出的顺序已经反过来了。
-这种思路的实现代码如下：
-```java
-public static void printListFromTailToHead(ListNode listNode){
-    Stack<Integer> stack = new Stack<Integer>();
 
-    while(listNode != null){
-        stack.push(listNode.val);
-        listNode = listNode.next;
-    }
-    while (!stack.isEmpty()){
-        System.out.println(stack.pop());
-    }
-}
-```
-第二种则是使用递归，递归在本质上就是一个栈结构。要实现反过来输出链表，我们每访问到一个节点的时候，
-先递归输出它后面的节点，再输出该节点自身，这样链表的输出结果就反过来了。
 ```java
-public static void printListFromTailToHeadRecursively(ListNode listNode){
-    if (listNode != null){
-        if (listNode.next != null){
-            printListFromTailToHeadRecursively(listNode.next);
-            System.out.println(listNode.val);
-        }else {
-            System.out.println(listNode.val);
+public class solution {
+    public static TreeNode reConstructBinaryTree(int [] pre, int [] in){
+        // 判断三连
+        if(pre == null || in == null){
+            return null;
         }
+        if(pre.length == 0 || in.length == 0){
+            return null;
+        }
+        if(pre.length != in.length){
+            return  null;
+        }
+        TreeNode root = new TreeNode(pre[0]);
+        for(int i = 0; i < pre.length; i++){
+             if (pre[0] == in[i]){
+                 root.left = reConstructBinaryTree(
+                         Arrays.copyOfRange(pre, 1, i+1),
+                         Arrays.copyOfRange(in, 0, i)
+                 );
+                 root.right = reConstructBinaryTree(
+                         Arrays.copyOfRange(pre, i+1, pre.length),
+                         Arrays.copyOfRange(in, i+1, in.length)
+                 );
+             }
+        }
+        return root;
     }
 }
-```
+
 

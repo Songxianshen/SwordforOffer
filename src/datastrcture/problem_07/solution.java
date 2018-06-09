@@ -1,44 +1,36 @@
 package datastrcture.problem_07;
 
-import utils.ListNode;
+import utils.TreeNode;
 
-import java.util.Stack;
+import java.util.Arrays;
 
 
 public class solution {
-    public static void printListFromTailToHead(ListNode listNode){
-        Stack<Integer> stack = new Stack<Integer>();
-
-        while(listNode != null){
-            stack.push(listNode.val);
-            listNode = listNode.next;
+    public static TreeNode reConstructBinaryTree(int [] pre, int [] in){
+        // 判断三连
+        if(pre == null || in == null){
+            return null;
+        }
+        if(pre.length == 0 || in.length == 0){
+            return null;
+        }
+        if(pre.length != in.length){
+            return  null;
         }
 
-        while (!stack.isEmpty()){
-            System.out.println(stack.pop());
+        TreeNode root = new TreeNode(pre[0]);
+        for(int i = 0; i < pre.length; i++){
+             if (pre[0] == in[i]){
+                 root.left = reConstructBinaryTree(
+                         Arrays.copyOfRange(pre, 1, i+1),
+                         Arrays.copyOfRange(in, 0, i)
+                 );
+                 root.right = reConstructBinaryTree(
+                         Arrays.copyOfRange(pre, i+1, pre.length),
+                         Arrays.copyOfRange(in, i+1, in.length)
+                 );
+             }
         }
-    }
-    public static void printListFromTailToHeadRecursively(ListNode listNode){
-        if (listNode != null){
-            if (listNode.next != null){
-                printListFromTailToHeadRecursively(listNode.next);
-                System.out.println(listNode.val);
-            }else {
-                System.out.println(listNode.val);
-            }
-
-        }
-    }
-
-    public static void main(String[] args) {
-        ListNode l1 = new ListNode(1);
-        ListNode l2 = new ListNode(2);
-        ListNode l3 = new ListNode(3);
-
-        l1.next = l2;
-        l2.next = l3;
-        printListFromTailToHead(l1);
-        printListFromTailToHeadRecursively(l1);
-
+        return root;
     }
 }
