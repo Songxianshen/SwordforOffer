@@ -40,4 +40,14 @@ public class solution {
         }
         return root;
     }
+
+    public static void main(String[] args) {
+        int [] pre = {1, 2, 4, 7, 3, 5, 6 ,8};
+        int [] in  = {4, 7 ,2, 1, 5, 3, 8, 6};
+        TreeNode root = reConstructBinaryTree(pre, in);
+        System.out.println(root.val);
+        System.out.println(root.left.val);
+        System.out.println(root.right.val);
+        System.out.println("验证成功");
+    }
 }
