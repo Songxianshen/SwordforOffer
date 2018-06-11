@@ -1,7 +1,13 @@
 package datastrcture.problem_03;
 
 public class solution {
+    /**
+     * 判断一个数组中是否有重复数字
+     * @param arr
+     * @return
+     */
     public static boolean duplicate(int [] arr){
+
         // 判断数组是否为空
         if(arr == null || arr.length <= 0){
             return false;

@@ -1,6 +1,7 @@
 package datastrcture.problem_04;
 
 public class solution {
+
     public static boolean find(int [][] array, int num){
         if (array == null){
             return false;
