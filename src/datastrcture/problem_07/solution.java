@@ -6,7 +6,14 @@ import java.util.Arrays;
 
 
 public class solution {
+    /**
+     * 通过前序遍历数组和中序遍历数组来构建二叉树。
+     * @param pre 前序遍历数组
+     * @param in 中序遍历数组
+     * @return 要得到的二叉树
+     */
     public static TreeNode reConstructBinaryTree(int [] pre, int [] in){
+
         // 判断三连
         if(pre == null || in == null){
             return null;
