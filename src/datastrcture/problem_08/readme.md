@@ -24,5 +24,33 @@
  节点 b 的父节点 a 就是节点 i 的下一个节点。
  
  ```java
-
+public class solution {
+    public static TreeLinkNode getNext(TreeLinkNode pNode) {
+        if(pNode == null){
+            return null;
+        }
+        // 当前节点有右节点
+        if(pNode.right != null){
+            TreeLinkNode p = pNode.right;
+            while (p.left != null){
+                p = p.left;
+            }
+            return p;
+        // 当前节点没有右节点
+        }else{
+            // 判断是否为根节点
+            if(pNode.father == null){
+                return null;
+            }
+            // 判断是否为父节点的左孩子
+            while (pNode.father != null){
+                if(pNode.father.left == pNode){
+                    return pNode.father;
+                }
+                pNode = pNode.father;
+            }
+            return null;
+        }
+    }
+}
 ```
