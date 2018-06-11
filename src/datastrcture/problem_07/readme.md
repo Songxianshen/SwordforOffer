@@ -27,7 +27,7 @@ public class TreeNode {
 由于在中序遍历序列中，有 3 个数字是左子树节点的值，因此左子树共有 3 个左子节点。同样，在前序遍历序列中，根节点后面的 3 个
 数字就是 3 个左子树节点的值，再后面的所有数字都是右子树节点的值。这样我们就在前序遍历和中序遍历两个序列中分别找到了左、右
 子树对应的子序列。 
-<div align=center><img width="450" height="250" src="../../images/preoblem_7_array.png"/></div>
+<div align=center><img width="500" height="250" src="../../images/preoblem_7_array.png"/></div>
 
 ```java
 public class solution {
