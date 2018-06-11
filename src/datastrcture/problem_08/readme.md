@@ -5,7 +5,8 @@
 给定一颗二叉树和其中的一个节点，如何找出中序遍历序列的下一个节点？树中的节点除了有两个分别指向左、右节点的指针，还有一个
 指向父节点的指针。  
 在图中二叉树的中序遍历序列是{d, b, h, e, i, a, f, c, g}。我们将以这颗树为例来分析如何找出二叉树的下一个节点。
-<div align=center><img width="250" height="250" src="../../images/problem_8_tree.png"/></div>
+<div align=center><img width="250" height="250" src="../../images/problem_8_tree.png"/></div>    
+
 **图1 上图是一颗有9个节点的二叉树。树中从父节点指向子节点的指针用实线表示，子节点指向父节点的指针用虚线表示**
 
 **解题思路：**    
