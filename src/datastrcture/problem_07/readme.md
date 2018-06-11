@@ -20,7 +20,7 @@ public class TreeNode {
 }
 ```
 <center class="half">
-    <img src="../../images/preoblem_7.png" width="40%" height="40%">
+    <img src="../../images/preoblem_7_tree.png" width="40%" height="40%">
 </center>
 
 **解题思路：**    
