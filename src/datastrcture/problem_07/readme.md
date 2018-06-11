@@ -19,12 +19,10 @@ public class TreeNode {
     }
 }
 ```
-<center class="half">
-    <img src="../../images/preoblem_7_tree.png" width="40%" height="40%">
-</center>
 
-![avatar](images/preoblem_7_tree.png)  
-![avatar](images/preoblem_7_array.png)  
+
+![avatar](../../images/preoblem_7_tree.png)  
+![avatar](../../images/preoblem_7_array.png)  
 **解题思路：**    
 如图所示，前序遍历序列的第一个数字 1 就是根节点的值。扫描中序遍历序列，就能确定根节点的值的位置。根据中序遍历的特点，在根
 节点的值 1 前面的 3 个数字都是左子树节点的值，位于 1 后面的数字都是右子树节点的值。  
