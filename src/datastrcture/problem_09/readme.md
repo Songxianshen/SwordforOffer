@@ -19,34 +19,47 @@
 时候了。如果我们把 stack1 中的元素逐个弹出来并压入 stack2 中，则元素在 stack2 中的顺序与元素在 stack1 中的顺序完全相反。因此经过
 三次弹出 stack1 和呀如 stack2 的操作后，stack1 为空，而 stack2 中的元素为{ c, b, a}，这时候就可以弹出 stack2 的栈顶 a 了，此时的 stack1
 为空，而 stack2 的元素为{c, b}，如图 b。 
+3. 继续删除队列头怎么办？剩下的两个元素是 b 和 c, b 比 c 早进入队列，因此 b 应该先删除。而此时 b 恰好 在栈顶上，所以弹出
+stack2 元素的栈顶即可，如图 3。
+4. 从上面的分析我们可以总结出删除一个元素的步骤：当stack2不为空时，在stack2中的栈顶元素就是最先进入队列的元素，可以弹出。
+当 stack2 为空时，我们把 stack1 中的元素逐个弹出并压入 stack2 。由于先进入队列的元素被压到了 stack1 的低端，经过弹出和压入操作
+之后就处于 stack2 的顶端，又可以直接弹出。
+5. 接下来插入一个元素 d 。我们还是把它压入 stack1 ，如图 d 所示。我们考虑下一次删除队里的头部 stack2 不为空，直接弹出它的
+栈顶元素 c ，如图 e 所示。而 c 的确比 d 先进入队列，应该在 d 之前从队列中删除， 因此不会出现任何矛盾。
  ```java
 public class solution {
-    public static TreeLinkNode getNext(TreeLinkNode pNode) {
-        if(pNode == null){
-            return null;
+
+    Stack<Integer> stack1 = new Stack<Integer>();
+    Stack<Integer> stack2 = new Stack<Integer>();
+
+    /**
+     * 在队列尾部插入节点
+     * @param node
+     */
+    public void appendTail(int node){
+        //将stack2的元素出栈，进栈道stack2中
+        while(!stack2.isEmpty()){
+            int x = stack2.pop();
+            stack1.push(x);
         }
-        // 当前节点有右节点
-        if(pNode.right != null){
-            TreeLinkNode p = pNode.right;
-            while (p.left != null){
-                p = p.left;
-            }
-            return p;
-        // 当前节点没有右节点
-        }else{
-            // 判断是否为根节点
-            if(pNode.father == null){
-                return null;
-            }
-            // 判断是否为父节点的左孩子
-            while (pNode.father != null){
-                if(pNode.father.left == pNode){
-                    return pNode.father;
-                }
-                pNode = pNode.father;
-            }
-            return null;
+        //node元素进栈
+        stack1.push(node);
+        //stack1中全体元素出栈，进入stack1
+        while(!stack1.isEmpty()){
+            int x = stack1.pop();
+            stack2.push(x);
         }
     }
-}
+    /**
+     * 删除头结点
+     * @return
+     */
+    public int deleteHead(){
+        if (!stack2.isEmpty()){
+            return stack2.pop();
+        }else {
+            return -1;
+        }
+    }
+
 ```
