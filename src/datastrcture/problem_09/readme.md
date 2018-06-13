@@ -8,7 +8,7 @@
 删除节点的功能。
 在图中二叉树的中序遍历序列是{d, b, h, e, i, a, f, c, g}。我们将以这颗树为例来分析如何找出二叉树的下一个节点。
 
-<div align=center><img width="600" height="250" src="queue.png"/></div>  
+<div align=center><img width="600" height="250" src="datastrcture/problem_09/problem_9_queue.png"/></div>  
 
 上图是一颗有9个节点的二叉树。树中从父节点指向子节点的指针用实线表示，子节点指向父节点的指针用虚线表示。  
 
