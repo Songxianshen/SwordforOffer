@@ -13,3 +13,42 @@ d. 从 i 开始向后搜索, 即i++ , 找到第一个大于 key 的值 A[i], 将
 e. 重复 c-d , 直到 i == j;
 
 
+```java
+/**
+ * 快速排序
+ * @param array 要排序的数组
+ */
+public static void quickSort(int [] array, int start, int end){
+
+    if (start > end){
+        return;
+    }
+    int i = start;
+    int j = end;
+    // 选择第一个数为key
+    int key = array[i];
+
+    while(i < j){
+        // 从右边往左开始搜索，如果出现比key小的元素，则array[j]与array[i]交换。
+        while (i < j && array[j] >= key)
+            j--;
+        if (array[j] < key){
+            int temp = array[j];
+            array[j] = array[i];
+            array[i] = temp;
+        }
+        // 从左边往右边开始搜索，如果出现比key大的，则array[i]与array[j]交换。
+        while(i < j && array[i] <= key)
+            i++;
+        if (array[i] > key){
+            int temp = array[i];
+            array[i] = array[j];
+            array[j] = temp;
+        }
+    // 此时key元素的索引就是 i ,key 左边的元素都小于 key，右边的元素都大于 key    
+    int keyIndex = i;
+    quickSort(array, start, keyIndex-1);
+    quickSort(array, keyIndex+1,end);
+    }
+}
+```
