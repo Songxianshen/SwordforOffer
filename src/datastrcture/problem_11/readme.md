@@ -9,7 +9,7 @@
 输入的旋转数组的特性，显然达不到面试官的要求。  
 该题给出的数组在一定程度上是排序的，因此我们可以试着用二分查找法的思路来寻找这个最小的元素。
 
-<div align=center><img width="450" height="450" src="problem_9_queue.png"/></div>  
+<div align=center><img width="300" height="300" src="problem_11.png"/></div>  
 
 ```java
 public class solution {
