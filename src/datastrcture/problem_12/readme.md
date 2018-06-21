@@ -12,6 +12,9 @@ c   f   c   s
 j   d   e   h
 ```
 **解题思路：**  
+遍历矩阵中所有的元素，任选一个格子作为路径的起点，如果路径上的第i个字符正好是ch，那么到相邻的格子寻找路径上第i+1个字符。除矩阵
+边界上的格子之外，其他格子都有相邻的4个格子。重复这个过程，直到路径上所有的字符都在矩阵中找到相应的位置。
+由于路径不能重复进入矩阵的格子，所以还需定义和字符矩阵大小一样的布尔值矩阵，用来标识路径是否已经进入了每个格子。
 
 ```java
 public class solution {
@@ -24,7 +27,6 @@ public class solution {
      * @return        是否找到
      */
     public static boolean hadPath(char[] matrix, int rows, int cols, char[] str){
-
         // 日常写判断
         if(matrix==null || rows<=0 || cols<=0 || str==null){
             return false;
@@ -32,7 +34,6 @@ public class solution {
         if (str.length==0)
             return false;
         boolean[] visited = new boolean[matrix.length];
-
         for (int i=0;i<rows;i++){
             for (int j=0;j<cols;j++){
                 if (findPath(matrix,i,j,rows,cols,0,visited,str)){
