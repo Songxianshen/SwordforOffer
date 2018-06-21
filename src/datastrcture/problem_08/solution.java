@@ -50,7 +50,6 @@ public class solution {
         root.left.right.right.father = root.left.right;
 
         // fuck
-
         root.right.left = new TreeLinkNode("f");
         root.right.left.father = root.right;
         root.right.right = new TreeLinkNode("g");
