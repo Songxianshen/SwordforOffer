@@ -31,7 +31,7 @@ public class solution {
         if (row<0 || row>= rows || col<0 || col>cols || str[k] != matrix[row*col+col]){
             return false;
         }
-        
+
     }
 
     public static void main(String[] args) {
