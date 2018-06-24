@@ -21,3 +21,4 @@
 11. &#160; [旋转数组中的最小数字](/src/datastrcture/problem_11)
 12. &#160; [矩阵中的路径](/src/datastrcture/problem_12)
 13. &#160; [机器人的运动范围](/src/datastrcture/problem_13)
+14. &#160; [减绳子](/src/datastrcture/problem_14)
