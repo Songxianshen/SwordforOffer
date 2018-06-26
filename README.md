@@ -5,7 +5,7 @@
 你可以点击每道题的目录就可以看到该题的解答与实现，正在持续更新中...  
 
 > 作者：安翔  
-> github:https://github.com/anxiangSir/SwordforOffer
+> github：https://github.com/anxiangSir/SwordforOffer
 
 
 ## 目录 
