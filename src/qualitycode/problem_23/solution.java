@@ -67,12 +67,30 @@ public class solution {
             node1 = node1.next;
             nodesInLoop ++;
         }
-        
 
-        return null;
+        // 先移动node1，次数为环中节点的数目
+        node1 = head;
+        for (int i=0;i<nodesInLoop;i++){
+            node1 = node1.next;
+        }
+
+        // 在移动node1和node2
+        ListNode node2 = head;
+        while (node1 != node2){
+            node1 = node1.next;
+            node2 = node2.next;
+        }
+
+        return node1;
     }
 
     public static void main(String[] args) {
+        ListNode head = createLinkedList(new int[]{1,2,3,4,5,6});
+        ListNode startNode = head.next.next;
+        ListNode finalNode = head.next.next.next.next.next;
+        finalNode.next = startNode;
+
+        System.out.println(entryNodeOfLoop(head).val);
 
     }
 }
