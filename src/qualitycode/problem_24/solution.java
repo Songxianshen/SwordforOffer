@@ -61,5 +61,8 @@ public class solution {
         // 反向打印链表
         printLinkedList(reverseList(head));
 
+        System.out.println(reverseList(null));
+        System.out.println(reverseList(new ListNode(4)).val);
+
     }
 }
