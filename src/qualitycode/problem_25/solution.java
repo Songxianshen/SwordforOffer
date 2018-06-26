@@ -1,4 +1,4 @@
-package datastrcture.problem_16;
+package qualitycode.problem_25;
 
 class ListNode{
     int val;

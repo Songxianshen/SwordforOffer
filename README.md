@@ -23,3 +23,5 @@
 13. &#160; [机器人的运动范围](/src/datastrcture/problem_13)
 14. &#160; [减绳子](/src/datastrcture/problem_14)
 15. &#160; [二进制中1的个数](/src/datastrcture/problem_15)
+#### 高质量的代码
+25. &#160; [链表中倒数第k个节点](/src/qualitycode/problem_25)
