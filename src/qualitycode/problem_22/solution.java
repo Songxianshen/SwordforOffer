@@ -26,21 +26,35 @@ public class solution {
     }
 
     public static ListNode findKtoTail(ListNode listHead,int k){
+
+        // 代码的鲁棒性，判断头指针和链表是否为空
+        if (listHead == null || k == 0){
+            return null;
+        }
+
         ListNode aheadNode = listHead;
         ListNode behindNode =  null;
+
         for (int i=0;i<k-1;i++){
-            aheadNode = aheadNode.next;
+            // 判断for循环中防止指向null
+            if (aheadNode.next != null)
+                aheadNode = aheadNode.next;
+            else
+                return null;
         }
+
         behindNode = listHead;
+
         while (aheadNode.next != null){
             aheadNode = aheadNode.next;
             behindNode = behindNode.next;
         }
+
         return behindNode;
     }
     public static void main(String[] args) {
         ListNode listHead = createLinkedList(new int[]{1,2,3,4,5,6,7});
-        System.out.println(findKtoTail(listHead,2).val);
+        ListNode nodeK = findKtoTail(listHead,2);
 
     }
 }
