@@ -9,7 +9,7 @@
 ## 目录 
 [数据结构节点的定义](/src/utils)  
 [排序的JAVA实现](/src/sorts)
-#### 数据结构与算法 
+> 数据结构与算法 
 3. &#160; [数组中重复的数字](/src/datastrcture/problem_03)
 4. &#160; [二维数组中的查找](/src/datastrcture/problem_04)
 5. &#160; [替换空格](/src/datastrcture/problem_05)
@@ -23,7 +23,7 @@
 13. &#160; [机器人的运动范围](/src/datastrcture/problem_13)
 14. &#160; [减绳子](/src/datastrcture/problem_14)
 15. &#160; [二进制中1的个数](/src/datastrcture/problem_15)
-#### 高质量的代码
+> 高质量的代码
 22. &#160; [链表中倒数第k个节点](/src/qualitycode/problem_22)
 23. &#160; [链表中环的入口节点](/src/qualitycode/problem_23)
 25. &#160; [合并两个排序的链表](/src/qualitycode/problem_25)
