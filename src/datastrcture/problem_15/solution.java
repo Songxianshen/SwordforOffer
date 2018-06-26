@@ -28,4 +28,5 @@ public class solution {
         max = products[length];
         return max;
     }
+
 }
