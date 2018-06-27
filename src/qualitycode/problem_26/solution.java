@@ -1,6 +1,10 @@
 package qualitycode.problem_26;
 
+import datastrcture.problem_08.TreeLinkNode;
+
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 class BinaryTreeNode{
@@ -58,6 +62,47 @@ public class solution {
         return doesTree1haveTree2(root1.left,root2.left) && doesTree1haveTree2(root1.right,root2.right);
     }
 
+    /**
+     * 通过前序遍历数组和中序遍历数组来构建二叉树
+     */
+    public static BinaryTreeNode reConstructBinaryTree(int[] pre, int[] in){
+        // 判断三连
+        if(pre == null || in == null){
+            return null;
+        }
+        if(pre.length == 0 || in.length == 0){
+            return null;
+        }
+        if(pre.length != in.length){
+            return  null;
+        }
+        BinaryTreeNode root = new BinaryTreeNode(pre[0]);
+        for (int i=0;i<pre.length;i++){
+            if (pre[0] == in[i]){
+                root.left = reConstructBinaryTree(
+                        Arrays.copyOfRange(pre,1,i+1),
+                        Arrays.copyOfRange(in,0,i)
+                );
+                root.right = reConstructBinaryTree(
+                        Arrays.copyOfRange(pre,i+1,pre.length),
+                        Arrays.copyOfRange(in,i+1,in.length)
+                );
+            }
+        }
+        return root;
+    }
 
+    public static void main(String[] args) {
+        // 通过先序和中序遍历构建二叉树
+        BinaryTreeNode root1 = reConstructBinaryTree(
+                new int[]{8, 8, 9, 2, 4, 7, 7},
+                new int[]{9, 8, 4, 2, 7, 8, 7}
+                );
+        BinaryTreeNode root2 = reConstructBinaryTree(
+                new int[]{8, 9, 2},
+                new int[]{9, 8, 2}
+                );
+        System.out.println(hasSubTree(root1,root2));
+    }
 
 }
