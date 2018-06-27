@@ -29,3 +29,11 @@
 24. &#160; [反转链表](/src/qualitycode/problem_24/readme.md)
 25. &#160; [合并两个排序的链表](/src/qualitycode/problem_25/readme.md)
 26. &#160; [树的子结构](/src/qualitycode/problem_26/readme.md)
+> 解决面试题的思路  
+27. 
+> 优化时间和空间效率
+39. 
+> 面试中的各项能力
+53. 
+> 两个面试案例
+66. 
