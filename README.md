@@ -38,4 +38,4 @@
 66. 
 
 ## 其他
-> 数据库设计笔记 `https://github.com/anxiangSir/Database`
+> 数据库设计笔记 https://github.com/anxiangSir/Database
