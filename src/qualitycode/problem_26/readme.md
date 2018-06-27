@@ -105,3 +105,8 @@ public class solution {
 
 }
 ```
+> 输出结果
+
+```
+true
+```
