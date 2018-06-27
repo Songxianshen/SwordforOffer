@@ -28,3 +28,4 @@
 23. &#160; [链表中环的入口节点](/src/qualitycode/problem_23/readme.md)
 24. &#160; [反转链表](/src/qualitycode/problem_24/readme.md)
 25. &#160; [合并两个排序的链表](/src/qualitycode/problem_25/readme.md)
+26. &#160; [树的子结构](/src/qualitycode/problem_26/readme.md)
