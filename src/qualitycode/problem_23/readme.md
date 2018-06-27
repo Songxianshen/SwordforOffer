@@ -91,7 +91,21 @@ public class solution {
 
         return node1;
     }
+    public static void main(String[] args) {
+        ListNode head = createLinkedList(new int[]{1,2,3,4,5,6});
+        ListNode startNode = head.next.next;
+        ListNode finalNode = head.next.next.next.next.next;
+        finalNode.next = startNode;
+
+        System.out.println(entryNodeOfLoop(head).val);
+
+    }
+}
 
 ```
 
-> 相关题目：
+> 输出：  
+
+```java
+3
+```
