@@ -60,6 +60,7 @@ public class solution {
     }
 
     /**
+     * 在这里我们复习一下如何通过前序和中序遍历来构建一颗二叉树，
      * 通过前序遍历数组和中序遍历数组来构建二叉树
      */
     public static BinaryTreeNode reConstructBinaryTree(int[] pre, int[] in){
@@ -102,11 +103,4 @@ public class solution {
         //判断树1是否包含树2
         System.out.println(hasSubTree(root1,root2));
     }
-
 }
-```
-> 输出结果
-
-```
-true
-```
