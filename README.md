@@ -5,8 +5,7 @@
 你可以点击每道题的目录就可以看到该题的解答与实现，正在持续更新中...  
 
 > 作者：安翔  
-> github：https://github.com/anxiangSir/SwordforOffer
-
+> github：https://github.com/anxiangSir
 
 ## 目录 
 > 数据结构与算法 
@@ -37,3 +36,6 @@
 53. 
 > 两个面试案例
 66. 
+
+## 其他
+> 数据库设计笔记 `https://github.com/anxiangSir/Database`
