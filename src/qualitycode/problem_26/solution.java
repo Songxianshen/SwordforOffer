@@ -3,9 +3,7 @@ package qualitycode.problem_26;
 import datastrcture.problem_08.TreeLinkNode;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 class BinaryTreeNode{
     int val;
@@ -93,6 +91,7 @@ public class solution {
     }
 
     public static void main(String[] args) {
+
         // 通过先序和中序遍历构建二叉树
         BinaryTreeNode root1 = reConstructBinaryTree(
                 new int[]{8, 8, 9, 2, 4, 7, 7},
@@ -103,6 +102,7 @@ public class solution {
                 new int[]{9, 8, 2}
                 );
         System.out.println(hasSubTree(root1,root2));
+        Map map = new HashMap();
     }
 
 }
