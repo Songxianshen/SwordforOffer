@@ -30,7 +30,7 @@
 25. &#160; [合并两个排序的链表](/src/qualitycode/problem_25/readme.md)
 26. &#160; [树的子结构](/src/qualitycode/problem_26/readme.md)
 > 解决面试题的思路  
-27. 
+27. &#160; [二叉树的镜像](/src/qualitycode/problem_27/readme.md)
 > 优化时间和空间效率
 39. 
 > 面试中的各项能力
