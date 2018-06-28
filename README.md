@@ -30,6 +30,7 @@
 26. &#160; [树的子结构](/src/qualitycode/problem_26/readme.md)
 > 解决面试题的思路  
 27. &#160; [二叉树的镜像](/src/qualitycode/problem_27/readme.md)
+28. &#160; [对称的二叉树](/src/qualitycode/problem_28/readme.md)
 > 优化时间和空间效率
 39. 
 > 面试中的各项能力
