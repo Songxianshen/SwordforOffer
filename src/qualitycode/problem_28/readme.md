@@ -7,7 +7,7 @@
 如果一颗二叉树和它的镜像一样，那么它是对称的。
 二叉树的结构定义如下：
 ```java
-//二叉树结构
+/*
 class BinaryTreeNode{
     int val;
     BinaryTreeNode left;
@@ -19,6 +19,7 @@ class BinaryTreeNode{
         this.right = null;
     }
 }
+*/
 ```
 > 解题思路： 
 ```java
