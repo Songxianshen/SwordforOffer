@@ -1,11 +1,10 @@
-package qualitycode.problem_31;
+package qualitycode.problem_32;
 
 
 
 import utils.BinaryTree;
 import utils.TreeNode;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 /*
