@@ -28,7 +28,7 @@ public class solution {
         LinkedList<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while (!queue.isEmpty()){
-            // 队列先进后出
+            // 队列先进先出
             TreeNode node = queue.poll();
             list.add(node.val);
             if (node.left != null) queue.addLast(node.left);
