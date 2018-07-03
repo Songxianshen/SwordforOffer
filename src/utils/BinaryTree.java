@@ -70,7 +70,7 @@ public class BinaryTree {
     }
 
     /**
-     * 先序遍历二叉树
+     * 花式方法打印二叉树
      */
     public void printTree(){
         if (this.root != null){
@@ -85,6 +85,11 @@ public class BinaryTree {
             System.out.print("该树层序遍历结果为：");
             printTopToBottom(this.root);
             System.out.print("\n");
+
+            System.out.println("=================================");
+            System.out.println("分行从上到下打印二叉树结果为：");
+            printTreeInLine(this.root);
+            System.out.println("=================================");
         }else{
             System.out.println("该二叉树为空..");
         }
@@ -132,8 +137,42 @@ public class BinaryTree {
             if (node.right != null) queue.addLast(node.right);
         }
         for (Object o:list){
-            System.out.print(o+" ");
+            System.out.print((int)o+" ");
         }
+    }
+
+    /**
+     * 分行层序遍历二叉树
+     * @param root
+     */
+    private void printTreeInLine(TreeNode root){
+        if (root==null) return;
+        LinkedList<TreeNode> queue = new LinkedList<>();
+        // 根节点入队
+        queue.add(root);
+        TreeNode node;
+        int nextLevel = 0;
+        int toBePrinted = 1;
+        while (!queue.isEmpty()){
+            node = queue.poll();
+            System.out.print(node.val + " ");
+            if (node.left != null){
+                queue.addLast(node.left);
+                nextLevel++;
+            }
+            if (node.right != null){
+                queue.addLast(node.right);
+                nextLevel++;
+            }
+            toBePrinted--;
+            if (toBePrinted == 0){
+                System.out.print("\n");
+                toBePrinted = nextLevel;
+                nextLevel = 0;
+            }
+
+        }
+
     }
 
     /**
