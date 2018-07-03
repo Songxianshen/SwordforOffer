@@ -170,9 +170,7 @@ public class BinaryTree {
                 toBePrinted = nextLevel;
                 nextLevel = 0;
             }
-
         }
-
     }
 
     /**
