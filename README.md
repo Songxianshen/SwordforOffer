@@ -33,7 +33,8 @@
 28. &#160; [对称的二叉树](/src/qualitycode/problem_28/readme.md)
 29. &#160; [顺时针打印矩阵](/src/qualitycode/problem_29/readme.md)
 30. &#160; [包含min函数的栈](/src/qualitycode/problem_30/readme.md)
-32. &#160; [从上到下打印二叉树](/src/qualitycode/problem_32/readme.md)
+32. &#160; [从上到下打印二叉树、分行从上到下打印二叉树、之字形打印二叉树](/src/qualitycode/problem_32/readme.md)  
+
 > 优化时间和空间效率
 39. 
 > 面试中的各项能力
