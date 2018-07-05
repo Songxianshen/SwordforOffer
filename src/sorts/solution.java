@@ -1,6 +1,5 @@
 package sorts;
 
-import java.lang.reflect.Array;
 
 public class solution{
     public static void quickSort(int[] array, int low, int high){
