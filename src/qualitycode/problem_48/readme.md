@@ -40,3 +40,37 @@ class solution{
     }
 }
 ```
+* 利用快慢指针
+
+1. 定义两个指针指向首个字符，慢指针不动，快指针先走，每走一步，判断快指针在HashSet中是否存在，不存在，存储字符信息并继续走，直到快指针
+指向重复字符串；
+2. 若此时快指针-慢指针>已经记录的字符串长度，更新字符串长度；
+3. 快指针不动，慢指针开始走，每走一步，将HashSet中对应的字符信息删除，直至快慢指针所指的字符相同（此时快慢指针依旧是错开的，慢指针指向
+快指针这个字符出现的第一次，快指针指向的是字符出现的第二次），此时不删除该字符的信息，慢指针直接++；
+4. 重复1、2、3，直至快指针走到字符串尾，当指针指向尾，再判断一次步骤2，返回子串长度。
+
+```java
+public class solution {
+    // 利用快慢指针
+    public static int longthOfLongestSubString(String str){
+        int count = 0;
+        int start = 0;
+        int end = 0;
+        Set<Character> set = new HashSet();
+        while (end != str.length()){
+            if (!set.contains(str.charAt(end))) set.add(str.charAt(end));
+            else {
+                if (end - start > count) count = end - start;
+                while (str.charAt(start) != str.charAt(end)){
+                    set.remove(str.charAt(start));
+                    start++;
+                }
+                start++;
+            }
+            end++;
+        }
+        if (end - start > count) count = end - start;
+        return count;
+    }
+}
+```
