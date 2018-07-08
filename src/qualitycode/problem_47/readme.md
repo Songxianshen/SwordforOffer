@@ -38,7 +38,7 @@ class solution{
     }
 }
 ```
-*广度搜索遍历
+* 广度搜索遍历
 ```java
 public class solution {
     public static int getMaxValueWithGraph(int[][] matrix){
