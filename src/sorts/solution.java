@@ -3,6 +3,7 @@ package sorts;
 
 public class solution{
     public static void quickSort(int[] array, int low, int high){
+
         int l = low;
         int h = high;
         int povit = array[low];
