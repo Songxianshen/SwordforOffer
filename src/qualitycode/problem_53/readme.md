@@ -14,7 +14,7 @@
 数字和`k`相等呢？我们先判断这个数字是不是第一个`k`。如果中间数字的前面一个数字不是
 `k`，那么此时中间的数字刚好就是第一个`k`；如果中间数字的前面一个数字也是`k`，那么第一
 个`k`肯定在数组的前半段，下一轮我们仍然需要在数组的前半段查找。
-```java_holder_method_tree
+```java
 public static int getFirstK(int[] data, int length, int k, int start, int end){
     if (start > end) return -1;
     int midIndex = (start + end) / 2;
