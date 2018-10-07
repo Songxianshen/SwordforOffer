@@ -39,6 +39,7 @@
 39. 
 47. &#160; [礼物的最大价值](/src/qualitycode/problem_47/readme.md)
 48. &#160; [最长不含重复字符的子字符串](/src/qualitycode/problem_48/readme.md)
+50. &#160; [第一个只出现一次的字符](/src/qualitycode/problem_50/readme.md)
 > 面试中的各项能力
 53.  
 > 两个面试案例
