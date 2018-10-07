@@ -40,5 +40,35 @@ public static int getFirstK(int[] data, int length, int k, int start, int end){
 下一个数字不是`k`，则中间数字就是最后一个`k`；否则下一轮我们还是要在数组的后边段去查找。
 我们同样可以基于递归写出如下代码：
 ```java
-
+public static int getLastK(int[] data, int length, int k, int start, int end){
+    if (start > end) return -1;
+    int midIndex = (start + end) / 2;
+    int midData = data[midIndex];
+    if (midData == k){
+        if ((midIndex < length - 1 && data[midIndex + 1] != k) || midIndex == length-1){
+            return midIndex;
+        } else {
+            start = midIndex + 1;
+        }
+    } else if (midData < k){
+        start = midIndex + 1;
+    } else{
+        end = midIndex - 1;
+    }
+    return getLastK(data, length, k, start, end);
+}
+```
+&emsp;&emsp;在分别找到第一个k和最后一个k的下表之后，我们就能计算出k在数组中出现的次数。
+相应的代码如下：
+```java
+public static int getNumbersOfK(int[] data, int length, int k){
+    int number = 0;
+    if (data != null && length > 0){
+        int first = getFirstK(data, length, k, 0, length-1);
+        int last = getLastK(data, length, k, 0, length-1);
+        if (first > -1 && last > -1)
+            number = last - first + 1;
+    }
+    return number;
+}
 ```
