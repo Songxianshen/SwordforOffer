@@ -42,7 +42,7 @@
 50. &#160; [第一个只出现一次的字符](/src/qualitycode/problem_50/readme.md)
 
 > 面试中的各项能力
-53.  
+53. &#160; [在排序数组中查找数字](/src/qualitycode/problem_53/readme.md) 
 > 两个面试案例
 66. 
 
