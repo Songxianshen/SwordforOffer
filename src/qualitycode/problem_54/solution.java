@@ -1,4 +1,4 @@
-package qualitycode.problem_53;
+package qualitycode.problem_54;
 
 
 
