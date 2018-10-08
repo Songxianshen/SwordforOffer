@@ -43,6 +43,7 @@
 
 > 面试中的各项能力
 53. &#160; [在排序数组中查找数字](/src/qualitycode/problem_53/readme.md) 
+56. &#160; [数组中数字出现的次数](/src/qualitycode/problem_56/readme.md) 
 > 两个面试案例
 66. 
 
