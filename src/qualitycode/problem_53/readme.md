@@ -72,3 +72,8 @@ public static int getNumbersOfK(int[] data, int length, int k){
     return number;
 }
 ```
+> 题目一:数字在排序数组中出现的次数。
+ 
+&emsp;&emsp; 统计一个数字在排序数组中出现的次数。例如，输入排序数组
+`{1，2，3，3，3，3，4，5}`和数字3，由于3在这个数组中出现了4此，因此输出4.
+> 解题思路：    
