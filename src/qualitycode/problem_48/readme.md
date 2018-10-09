@@ -24,7 +24,7 @@ class solution{
         int currentLength = 0;
         int maxLength = 0;
         Map<Character, Integer> map = new HashMap();
-        for (int i=0;i<str.length()-1;i++){
+        for (int i=0; i<str.length()-1; i++){
             char c = str.charAt(i);
             if (!map.containsKey(c) || i-map.get(c) > currentLength){
                 currentLength++;
