@@ -38,12 +38,16 @@ public class solution {
             if (!map.containsKey(c) || i-map.get(c) > currentLength){
                 currentLength++;
             }else{
-                if (currentLength > maxLength) maxLength = currentLength;
+                if (currentLength > maxLength) {
+                    maxLength = currentLength;
+                }
                 currentLength = i - map.get(c);
             }
-            map.put(c,i);
+            map.put(c, i);
         }
-        if (currentLength>maxLength) maxLength=currentLength;
+        if (currentLength>maxLength) {
+            maxLength = currentLength;
+        }
         return maxLength;
     }
     public static void main(String[] args) {

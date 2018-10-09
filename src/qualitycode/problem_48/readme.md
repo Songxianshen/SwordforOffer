@@ -23,19 +23,22 @@ class solution{
     public static int longestSubstringWithoutDuplication(String str){
         int currentLength = 0;
         int maxLength = 0;
-
         Map<Character, Integer> map = new HashMap();
         for (int i=0;i<str.length()-1;i++){
             char c = str.charAt(i);
             if (!map.containsKey(c) || i-map.get(c) > currentLength){
                 currentLength++;
             }else{
-                if (currentLength > maxLength) maxLength = currentLength;
+                if (currentLength > maxLength) {
+                    maxLength = currentLength;
+                }      
                 currentLength = i - map.get(c);
             }
-            map.put(c,i);
+            map.put(c, i);
         }
-        if (currentLength>maxLength) maxLength=currentLength;
+        if (currentLength>maxLength) {
+            maxLength = currentLength;
+        }
         return maxLength;
     }
 }
