@@ -43,8 +43,10 @@
 
 > 面试中的各项能力
 53. &#160; [在排序数组中查找数字](/src/qualitycode/problem_53/readme.md) 
+54. &#160; [二叉搜索树的第k个大节点](/src/qualitycode/problem_54/readme.md) 
 56. &#160; [数组中数字出现的次数](/src/qualitycode/problem_56/readme.md) 
 57. &#160; [和为s的数字](/src/qualitycode/problem_57/readme.md) 
+58. &#160; [翻转字符串](/src/qualitycode/problem_58/readme.md) 
 > 两个面试案例
 66. 
 
