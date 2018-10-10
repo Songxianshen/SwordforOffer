@@ -13,7 +13,7 @@ class solution{
         if (str == null)
             return '\0';
         Map<Character,Integer> map = new HashMap<Character, Integer>();
-        for(char c:str.toCharArray()){
+        for(char c : str.toCharArray()){
             if(map.containsKey(c)){
                 int v = map.get(c);
                 map.put(c, ++v);
@@ -25,7 +25,7 @@ class solution{
         while (index < str.length()){
             if (map.get(str.charAt(index)) == 1)
                 return str.charAt(index);
-            index ++;
+            index++;
         }
         return '\0';
     }
