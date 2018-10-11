@@ -50,8 +50,4 @@ public class solution {
         }
         return maxLength;
     }
-    public static void main(String[] args) {
-        System.out.println(longestSubstringWithoutDuplication("arabcacfr"));
-        System.out.println(longthOfLongestSubString("arabcacfr"));
-    }
 }
