@@ -34,9 +34,27 @@ public class solution {
             }
         }
     }
+    public static String leftRotateString(String str, int n){
+        if (str != null){
+            StringBuilder sb = new StringBuilder(str);
+            int length = sb.length();
+            if (length > 0 && n > 0 && n < length){
+                int firstStart = 0;
+                int firstEnd = n - 1;
+                int secondStart = n;
+                int secondEnd = length - 1;
+                // 翻转字符串的前面n个字符
+                reverse(sb, firstStart, firstEnd);
+                // 翻转字符串的后面部分
+                reverse(sb, secondStart, secondEnd);
+                // 翻转整个字符串
+                reverse(sb, firstStart, secondEnd);
+            }
+            return sb.toString();
+        }
+        return null;
+    }
     public static void main(String[] args) {
-        StringBuilder sb = new StringBuilder(("I am a student."));
-        reverseStentence(sb);
-        System.out.println(sb);
+        System.out.println(leftRotateString("abcedfg", 2));
     }
 }
