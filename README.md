@@ -45,6 +45,7 @@
 56. &#160; [数组中数字出现的次数](/src/qualitycode/problem_56/readme.md) 
 57. &#160; [和为s的数字](/src/qualitycode/problem_57/readme.md) 
 58. &#160; [翻转字符串](/src/qualitycode/problem_58/readme.md) 
+59. &#160; [队列的最大值](/src/qualitycode/problem_59/readme.md) 
 65. &#160; [不用加减乘数做加法](/src/qualitycode/problem_65/readme.md) 
 
 > 两个面试案例
